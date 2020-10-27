@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% include 'head.html' %}
+        <title>Dashboard | Was This The Face</title>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            {% include 'sidebar.html' %}
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-minimize">
+                                <button id="minimizeSidebar" class="btn btn-primary btn-fill btn-round btn-icon d-none d-lg-block">
+                                    <i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+                                    <i class="fa fa-navicon visible-on-sidebar-mini"></i>
+                                </button>
+                            </div>
+                            <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-body ">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="icon-big text-center icon-warning">
+                                                    <i class="nc-icon nc-single-02 text-primary"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="numbers">
+                                                    <p class="card-category">Total Users</p>
+                                                    <h4 class="card-title">200</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-calendar-o"></i> Last day
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-body ">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="icon-big text-center icon-warning">
+                                                    <i class="nc-icon nc-album-2 text-success"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="numbers">
+                                                    <p class="card-category">Total Photos</p>
+                                                    <h4 class="card-title">1200</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> In the last hour
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="card card-stats">
+                                    <div class="card-body ">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <div class="icon-big text-center icon-warning">
+                                                    <i class="nc-icon nc-note-03 text-danger"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="numbers">
+                                                    <p class="card-category">Total Tracks</p>
+                                                    <h4 class="card-title">12</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-refresh"></i> Update now
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card ">
+                                    <div class="card-header ">
+                                        <h4 class="card-title">Graph</h4>
+                                        <p class="card-category">Photo Upload</p>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div id="chartActivity" class="ct-chart"></div>
+                                    </div>
+                                    <div class="card-footer ">
+                                        <div class="legend">
+                                            <i class="fa fa-circle text-info"></i> Lorem
+                                            <i class="fa fa-circle text-danger"></i> Lorem
+                                        </div>
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-check"></i> Data information certified
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </body>
+    {% include 'foot.html' %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Javascript method's body can be found in assets/js/demos.js
+            demo.initDashboardPageCharts();
+
+            //demo.showNotification();
+
+            demo.initVectorMap();
+
+        });
+    </script>
+</html>

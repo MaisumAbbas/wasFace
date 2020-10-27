@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% include 'head.html' %}
+        <title>Add An Audio | Audio Track | Was This The Face</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include 'sidebar.html' %}
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-minimize">
+                                <button id="minimizeSidebar" class="btn btn-primary btn-fill btn-round btn-icon d-none d-lg-block">
+                                    <i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+                                    <i class="fa fa-navicon visible-on-sidebar-mini"></i>
+                                </button>
+                            </div>
+                            <a class="navbar-brand" href="#pablo"> Add An Audio </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card horizontal-form">
+                                    <div class="card-header ">
+                                        <!--<h4 class="card-title">Horizontal Form</h4>-->
+                                    </div>
+                                    <div class="card-body ">
+                                        <form class="form-horizontal">
+                                            <div class="row">
+                                                <div class="col-md-6 pr-1">
+                                                    <div class="form-group">
+                                                        <label>Track ID</label>
+                                                        <input type="text" class="form-control" placeholder="Track ID">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 pl-1">
+                                                    <div class="form-group">
+                                                        <label>Track Name</label>
+                                                        <input type="text" class="form-control" placeholder="Track Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Description</label>
+                                                        <input type="text" class="form-control" placeholder="Description">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class=row>
+                                                <div class="col-md-12">
+                                                    <label>Assign To: </label>
+                                                    <div class="form-check form-check-radio checkbox-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="exampleRadio" id="exampleRadios1" value="option1">
+                                                            <span class="form-check-sign"></span>
+                                                            &nbsp; Section 1
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-radio checkbox-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="exampleRadio" id="exampleRadios2" value="option2">
+                                                            <span class="form-check-sign"></span>
+                                                            &nbsp; Section 2
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-radio checkbox-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="exampleRadio" id="exampleRadios3" value="option3">
+                                                            <span class="form-check-sign"></span>
+                                                            &nbsp; Section 3
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-radio checkbox-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="exampleRadio" id="exampleRadios4" value="option4">
+                                                            <span class="form-check-sign"></span>
+                                                            &nbsp; Section 4
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-radio checkbox-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="exampleRadio" id="exampleRadios5" value="option5">
+                                                            <span class="form-check-sign"></span>
+                                                            &nbsp; Section 5
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-radio checkbox-inline">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="radio" name="exampleRadio" id="exampleRadios6" value="option6">
+                                                            <span class="form-check-sign"></span>
+                                                            &nbsp; Section 6
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn btn-fill btn-info">Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include 'footer.html' %}
+            </div>
+        </div>
+    </body>
+    {% include 'foot.html' %}
+    <script type="text/javascript">
+        var $table = $('#bootstrap-table');
+    
+        function operateFormatter(value, row, index) {
+            return [
+                /*'<a rel="tooltip" title="View" class="btn btn-link btn-info table-action view" href="javascript:void(0)">',
+                '<i class="fa fa-image"></i>',
+                '</a>',*/
+                '<a rel="tooltip" title="Edit" class="btn btn-link btn-warning table-action edit" href="javascript:void(0)">',
+                '<i class="fa fa-edit"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Remove" class="btn btn-link btn-danger table-action remove" href="javascript:void(0)">',
+                '<i class="fa fa-remove"></i>',
+                '</a>'
+            ].join('');
+        }
+    
+        $().ready(function() {
+            window.operateEvents = {
+                /*'click .view': function(e, value, row, index) {
+                    info = JSON.stringify(row);
+    
+                    swal('You click view icon, row: ', info);
+                    console.log(info);
+                },*/
+                'click .edit': function(e, value, row, index) {
+                    info = JSON.stringify(row);
+    
+                    swal('You click edit icon, row: ', info);
+                    console.log(info);
+                },
+                'click .remove': function(e, value, row, index) {
+                    console.log(row);
+                    $table.bootstrapTable('remove', {
+                        field: 'id',
+                        values: [row.id]
+                    });
+                }
+            };
+    
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+                clickToSelect: true,
+                showRefresh: true,
+                search: true,
+                showToggle: true,
+                showColumns: true,
+                pagination: true,
+                searchAlign: 'left',
+                pageSize: 8,
+                clickToSelect: false,
+                pageList: [8, 10, 25, 50, 100],
+    
+                formatShowingRows: function(pageFrom, pageTo, totalRows) {
+                    //do nothing here, we don't want to show the text "showing x of y from..."
+                },
+                formatRecordsPerPage: function(pageNumber) {
+                    return pageNumber + " rows visible";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+    
+            //activate the tooltips after the data table is initialized
+            $('[rel="tooltip"]').tooltip();
+    
+            $(window).resize(function() {
+                $table.bootstrapTable('resetView');
+            });
+        });
+    </script>
+</html>
