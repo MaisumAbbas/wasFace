@@ -16,20 +16,8 @@
 
     <body data-color="blue">
         <div class="wrapper wrapper-full-page">
-            <div class="full-page  section-image" data-image="{% static 'assets/img/bg.png' %}">
-                <!-- Navbar -->
-                <nav class="navbar navbar-expand-lg navbar-transparent">
-                    <div class="container">
-                        <div class="navbar-wrapper">
-                            <div class="logo" style="margin-top: 50px;">
-                                <a href="#" class="simple-text logo-mini">
-                                    <img src="{% static 'assets/img/logo.png' %}" style="max-width: 150px;" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <!-- End Navbar -->
+            <div class="full-page  section-image">
+                <br>
                 <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
                 <div class="content">
                     <div class="container container2">
@@ -41,7 +29,7 @@
                                             <div class="col-md-12 text-center">
                                                 <video autoplay="true" id="videoElement"></video>
                                                 <br>
-                                                <button class="btn btn-primary">Capture Photo</button>
+                                                <a href="{% url 'index' %}"><button class="btn" style="background-color: black;">Capture Photo</button></a>
                                             </div>
                                         </div>
                                     </div>
@@ -51,14 +39,6 @@
                     </div>
                 </div>
             </div>
-            <footer class="footer" style="margin-top: 50px;">
-                <div class="container">
-                    <p class="copyright">
-                        © 2020 Powered By
-                        <a href="http://www.esquall.com">eSquall Inc.</a>
-                    </p>
-                </div>
-            </footer>
         </div>
     </body>
     {% include 'foot.html' %}

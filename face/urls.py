@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from faceapp import views
+from faceapp.views import *
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('home/', views.home, name='home'),
     path('instructions/', views.instructions, name='instructions'),
     path('camera/', views.camera, name='camera'),
     path('login/', views.admin_login, name='login'),

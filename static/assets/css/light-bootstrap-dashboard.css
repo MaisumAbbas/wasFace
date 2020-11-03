@@ -1193,7 +1193,7 @@ input:focus {
 
 .full-page:before {
     opacity: .33;
-    background: #000000;
+    background: #ffffff;
 }
 
 .full-page.register-page .content:first-of-type {
