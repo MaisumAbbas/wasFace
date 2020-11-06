@@ -8,25 +8,46 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://allfont.net/allfont.css?fonts=courier" rel="stylesheet" type="text/css" />
         <style>
+            @font-face {
+                font-family: Avenir;
+                src: url('../static/assets/fonts/AvenirNextLTPro-Regular.otf');
+            }
+            #link {
+                color: gray;
+                font-family: Avenir;
+            }
+            #link a {
+                color: gray;
+                text-decoration: none;
+                font-family: Avenir;
+                font-size: medium;
+            }
+            .nohover:hover{
+                color: #fff;
+            }
+            th, td {
+                font-family: 'Courier';
+            }
         </style>
     </head>
 
     <body>
         <div class="wrapper wrapper-full-page">
-            <div class="full-page  section-image">
+            <div class="full-page  section-image" style="font-family: Courier;">
                 <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
                 <div class="content">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
-                                    <div class="card-body table-full-width table-responsive" style="margin-top: 50px; ">
+                                    <div class="card-body table-full-width table-responsive" style="margin-top: 30px; margin-bottom: -50px;">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <table class="table table-hover table-striped" style="margin-left: 40px;">
                                                     <thead>
-                                                        <th>Directions</th>
+                                                        <th style="font-size: 12px;">Directions</th>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
@@ -85,7 +106,9 @@
                                                             </a>
                                                         </div>
                                                         <br><br><br><br><br>
-                                                        <a href="{% url 'camera' %}"><button class="btn" style="background-color: black;">Open Camera</button></a>
+                                                        <a href="{% url 'camera' %}"><button type="button" class="btn nohover" style="background-color: black;">Open Camera</button></a>
+                                                        <br><br><br>
+                                                        <p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -98,6 +121,7 @@
                 </div>
             </div>
         </div>
+        <!--<div id="link_p" style="position: absolute; right: 5px;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></div>-->
     </body>
     {% include 'foot.html' %}
     <script>

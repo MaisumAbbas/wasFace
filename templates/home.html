@@ -5,6 +5,25 @@
     <head>
         <title>Home | Was This The Face</title>
         {% include 'head.html' %}
+        <style>
+            @font-face {
+                font-family: Avenir;
+                src: url('../static/assets/fonts/AvenirNextLTPro-Regular.otf');
+            }
+            #link {
+                color: gray;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                font-family: Avenir;
+            }
+            #link a {
+                color: gray;
+                text-decoration: none;
+                font-family: Avenir;
+                font-size: medium;
+            }
+        </style>
     </head>
 
     <body>
@@ -31,10 +50,10 @@
                                 <div class="row">
                                     <div class="col-md-12 text-center">
                                         <img src="{% static 'assets/img/first.png' %}" style="max-width: 38%;" alt="">
-                                        <br><br>
-                                        <button type="button" class="btn" style="background-color: white;" data-toggle="modal" data-target="#myModal">
-                                            <img src="{% static 'assets/img/cam.png' %}" alt="" width="35px">
-                                        </button>
+                                        <br>
+                                        <button type="button" class="btn" style="float: left; background-color: black;" data-toggle="modal" data-target="#myModal">
+                                            Click here to add your face
+                                        </button><p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -59,6 +78,7 @@
                 </div>
             </div>
         </div>
+        <!--<p id="link"><a href="https://www.emilyerekson.com/installations">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations">Jamie Erekson</a></p>-->
     </body>
     {% include 'foot.html' %}
     <script>
