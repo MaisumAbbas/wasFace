@@ -8,71 +8,48 @@
         <style>
             @font-face {
                 font-family: Avenir;
-                src: url('../static/assets/fonts/AvenirNextLTPro-Regular.otf');
+                src: url('../static/assets/fonts/arial.ttf');
             }
-            #link {
-                color: gray;
-                position: absolute;
-                bottom: 5px;
-                right: 5px;
-                font-family: Avenir;
-            }
-            #link a {
-                color: gray;
+            div a {
+                color: black;
                 text-decoration: none;
                 font-family: Avenir;
-                font-size: medium;
+            }
+
+            a:hover{
+                color: #A9A9A9;
             }
         </style>
     </head>
 
-    <body>
+    <body onload="switchPage()">
         <div class="wrapper wrapper-full-page wrapper-full-page2">
             <div class="full-page  section-image" style="width:100%; height: 89%;">
-                <!-- Navbar -->
-                <!--<nav class="navbar navbar-expand-lg navbar-transparent">
-                    <div class="container">
-                        <div class="navbar-wrapper">
-                            <div class="logo" style="margin-top: 50px;">
-                                <a href="#" class="simple-text logo-mini">
-                                    <img src="{% static 'assets/img/logo.png' %}" style="max-width: 150px;" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>-->
-                <!-- End Navbar -->
-                <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
                 <div class="content">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <img src="{% static 'assets/img/first.png' %}" style="max-width: 38%;" alt="">
-                                        <br>
-                                        <button type="button" class="btn" style="float: left; background-color: black;" data-toggle="modal" data-target="#myModal">
-                                            Click here to add your face
-                                        </button><p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>
+                                        <img src="{% static 'assets/img/fourth.png' %}" style="max-width: 43%;" alt="">
+                                        <br><br>
+                                        <div class="row">
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-2 text-left">
+                                                <a href="{% url 'instructions' %}" style="font-size: 12px; letter-spacing: 0;">
+                                                    <b>CLICK HERE TO ADD YOUR FACE</b>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-2 text-right" style="font-size: 12px; letter-spacing: 5px;">
+                                                <a href="#">ABOUT</a>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                        
+                                        <!--<p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>-->
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog text-center">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Terms &amp; Privacy</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>By clicking Agree and Continue, I hereby agree and consent to the <a href="#">User Agreement</a>, its policies, and the <a href="#">Privacy Policy</a>.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="{% url 'instructions' %}"><button type="button" class="btn" style="background-color: black;">Agree and Continue</button></a>
                         </div>
                     </div>
                 </div>
@@ -90,5 +67,12 @@
                 $('.card').removeClass('card-hidden');
             }, 700)
         });
+
+        function switchPage(){
+            setTimeout(function () {
+                window.location.href = "/";
+                window.clearTimeout(tID);		// clear time out.
+            }, 30000);
+        }
     </script>
 </html>

@@ -10,24 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://allfont.net/allfont.css?fonts=courier" rel="stylesheet" type="text/css" />
         <style>
-            @font-face {
-                font-family: Avenir;
-                src: url('../static/assets/fonts/AvenirNextLTPro-Regular.otf');
-            }
-            #link {
-                color: gray;
-                font-family: Avenir;
-            }
-            #link a {
-                color: gray;
-                text-decoration: none;
-                font-family: Avenir;
-                font-size: medium;
-            }
-            .nohover:hover{
-                color: #fff;
-            }
-            th, td {
+            th, td, #camera_open, #myModal {
                 font-family: 'Courier';
             }
         </style>
@@ -54,13 +37,13 @@
                                                             <td>Allow for adequate lightning.</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Remove eyeglasses and face coverings (you may wear a hat or head covering as long as your hairline is still visible).</td>
-                                                        </tr>
-                                                        <tr>
                                                             <td>Sit up straight and drop your shoulders.</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>Face the camera directly with your head centered in the frame. Make sure your full face is in view and both ears are visible.</td>
+                                                            <td>Face the camera directly with your head centered in the frame.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Make sure your full face is in view and both ears are visible (you may wear eye-glasses, and a hat or head covering as long as your full forehead is visible).</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Look directly at the camera with a neutral expression.</td>
@@ -77,21 +60,14 @@
                                             <div class="col-md-6 ml-auto mr-auto">
                                                 <div class="row">
                                                     <div class="col-md-12 text-center">
-                                                        <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="max-width: 60%; max-height: 60%; margin-left: 100px;">
-                                                            <!-- Indicators -->
-                                                            <!--<ol class="carousel-indicators">
-                                                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                                            </ol>-->
-                                                          
-                                                            <!-- Wrapper for slides -->
+                                                        <div id="myCarousel" class="carousel slide" data-ride="carousel"  style="max-width: 52%; margin-left: 130px;">
                                                             <div class="carousel-inner">
                                                                 <div class="item active">
-                                                                    <img src="{% static 'assets/img/boy.png' %}" alt="Boy" >
+                                                                    <img src="{% static 'assets/img/boy4.jpg' %}" alt="Boy" >
                                                                 </div>
                                                             
                                                                 <div class="item">
-                                                                    <img src="{% static 'assets/img/girl.png' %}" alt="Girl">
+                                                                    <img src="{% static 'assets/img/girl4.jpg' %}" alt="Girl">
                                                                 </div>
                                                             </div>
                                                           
@@ -105,8 +81,8 @@
                                                                 <span class="sr-only">Next</span>
                                                             </a>
                                                         </div>
-                                                        <br><br><br><br><br>
-                                                        <a href="{% url 'camera' %}"><button type="button" class="btn nohover" style="background-color: black;">Open Camera</button></a>
+                                                        <br><br>
+                                                        <a id="camera_open"  data-toggle="modal" data-target="#myModal"><button type="button" class="btn nohover" style="background-color: black;">open camera</button></a>
                                                         <br><br><br>
                                                         
                                                     </div>
@@ -117,7 +93,23 @@
                                 </div>
                             </div>
                         </div>
-                        <p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>
+                        <!--<p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>-->
+                    </div>
+                </div>
+            </div>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog text-center">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">terms &amp; privacy</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: 14px; font-family: Courier;">By clicking "agree and continue", I hereby agree and consent to the <a href="#">user agreement</a>, its policies, and the <a href="#">privacy policy</a>.</p>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <a href="{% url 'camera' %}"><button type="button" class="btn" style="background-color: black;">agree and continue</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,5 +126,5 @@
                 $('.card').removeClass('card-hidden');
             }, 700)
         });
-    </script>
+    </script>    
 </html>

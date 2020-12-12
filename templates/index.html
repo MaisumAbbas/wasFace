@@ -13,29 +13,21 @@
                 color: white;
                 text-decoration: none;
             }
-            @font-face {
-                font-family: Avenir;
-                src: url('../static/assets/fonts/AvenirNextLTPro-Regular.otf');
-            }
-            p {
-                color: gray;
-                position: absolute;
-                bottom: 5px;
-                right: 5px;
-                font-family: Avenir;
-            }
-            p a {
-                color: gray;
-                text-decoration: none;
-                font-family: Avenir;
-            }
         </style>
     </head>
 
-    <body>
-        <div class="row" style="position: absolute; top: 50%; left: 45%;">
+    <body onload="switchPage()">
+        <div class="row" style="position: absolute; top: 50%; left: 45%; font-family: Courier">
             <a href="{% url 'home' %}">was this the face</a>
         </div>
-        <p><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>
+
+        <script>
+            function switchPage(){
+                setTimeout(function () {
+                    window.location.href = "/home";
+                    window.clearTimeout(tID);		// clear time out.
+                }, 3000);
+            }
+        </script>
     </body>
 </html>
