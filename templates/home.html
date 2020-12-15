@@ -11,7 +11,7 @@
                 src: url('../static/assets/fonts/arial.ttf');
             }
             div a {
-                color: black;
+                color: gray;
                 text-decoration: none;
                 font-family: Avenir;
             }
@@ -31,22 +31,24 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <img src="{% static 'assets/img/fourth.png' %}" style="max-width: 43%;" alt="">
-                                        <br><br>
+                                        <img src="{% static 'assets/img/second.png' %}" style="max-width: 31%;" alt="">
+                                        <br><br>                                 
+                                        <!--<p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>-->
+                                    </div>
+                                    <div class="col-md-12 text-center">
                                         <div class="row">
                                             <div class="col-md-4"></div>
                                             <div class="col-md-2 text-left">
-                                                <a href="{% url 'instructions' %}" style="font-size: 12px; letter-spacing: 0;">
+                                                <a href="{% url 'instructions' %}" style="font-size: 12px; letter-spacing: 0; position: relative; left: 50px; padding-left: 5px;">
                                                     <b>CLICK HERE TO ADD YOUR FACE</b>
                                                 </a>
                                             </div>
-                                            <div class="col-md-2 text-right" style="font-size: 12px; letter-spacing: 5px;">
-                                                <a href="#">ABOUT</a>
+                                            <div class="col-md-2 text-right" style="font-size: 12px; letter-spacing: 5px; position: relative; right: 10px;">
+                                                <a href="#"><b>ABOUT</b></a>
                                             </div>
                                             <div class="col-md-4"></div>
                                         </div>
-                                        
-                                        <!--<p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>-->
+
                                     </div>
                                 </div>
                             </div>
