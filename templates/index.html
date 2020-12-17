@@ -16,18 +16,9 @@
         </style>
     </head>
 
-    <body onload="switchPage()">
+    <body>
         <div class="row" style="position: absolute; top: 50%; left: 45%; font-family: Courier">
             <a href="{% url 'home' %}">was this the face</a>
         </div>
-
-        <script>
-            function switchPage(){
-                setTimeout(function () {
-                    window.location.href = "/home";
-                    window.clearTimeout(tID);		// clear time out.
-                }, 3000);
-            }
-        </script>
     </body>
 </html>

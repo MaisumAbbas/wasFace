@@ -1,0 +1,139 @@
+@font-face {
+    font-family: Avenir;
+    src: url('../static/assets/fonts/arial.ttf');
+}
+div a {
+    color: #C1C1C1;
+    text-decoration: none;
+    font-family: Avenir;
+}
+
+a:hover{
+    color: #A9A9A9;
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1201px){
+    img {
+        max-width: 31.4%;
+    }
+    div a b{
+        position: relative;
+        right: -24px;
+    }
+    #about{
+        position: relative;
+        left: 21px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px){
+    img {
+        max-width: 85%;
+    }
+    div a b{
+        position: relative;
+        right: 21px;
+    }
+    #about{
+        position: relative;
+        left: 79px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 899px){
+    img {
+        max-width: 85%;
+    }
+    div a b{
+        position: relative;
+        right: 51px;
+    }
+    #about{
+        position: relative;
+        left: 107px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 899px){
+    img {
+        max-width: 85%;
+    }
+    div a b{
+        position: relative;
+        right: 51px;
+    }
+    #about{
+        position: relative;
+        left: 107px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 767px){
+    img {
+        max-width: 85%;
+    }
+    div a b{
+        position: relative;
+        right: 90px;
+    }
+    #about{
+        position: relative;
+        left: 147px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 599px){
+    img {
+        max-width: 85%;
+    }
+    div a b{
+        position: relative;
+        right: 90px;
+    }
+    #about{
+        position: relative;
+        left: 147px;
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 481px){
+    img {
+        max-width: 85%;
+    }
+    div a b{
+        position: relative;
+        left: 99px;
+    }
+    #about{
+        position: relative;
+        left: -56px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 321px){
+    img {
+        max-width: 90%;
+    }
+    div a b{
+        position: relative;
+        left: 83px;
+    }
+    #about{
+        position: relative;
+        right: 41px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    img {
+        max-width: 100%;
+    }
+    div a b{
+        position: relative;
+        left: 44px;
+    }
+    #about{
+        position: relative;
+        right: 10px;
+    }
+}
