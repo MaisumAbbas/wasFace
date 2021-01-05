@@ -11,6 +11,9 @@ def index(request):
 def home(request):
     return render(request, 'home.html')
 
+def flash(request):
+    return render(request, 'flash.html')
+
 def instructions(request):
     return render(request, 'instructions.html')
 

@@ -12,128 +12,288 @@ a:hover{
     color: #A9A9A9;
 }
 
-@media screen and (max-width: 1366px) and (min-width: 1201px){
-    img {
-        max-width: 31.4%;
-    }
+@media screen and (min-width: 5121px){
     div a b{
         position: relative;
-        right: -24px;
+        right: -49px;
     }
     #about{
         position: relative;
-        left: 21px;
+        left: -11px;
+    }
+}
+@media screen and (max-width: 5120px) and (min-width: 3001px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 3000px) and (min-width: 2881px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 2880px) and (min-width: 2561px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 2161px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 2160px) and (min-width: 1921px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1601px){
+    div a b{
+        position: relative;
+        right: 0px;
+    }
+    #about{
+        position: relative;
+        left: 55px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1441px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1367px){
+    div a b{
+        position: relative;
+        right: -49px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1201px){
+    div a b{
+        position: relative;
+        right: -47px;
+    }
+    #about{
+        position: relative;
+        left: -11px;
     }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1025px){
-    img {
-        max-width: 85%;
-    }
     div a b{
         position: relative;
-        right: 21px;
+        right: -47px;
     }
     #about{
         position: relative;
-        left: 79px;
+        left: -11px;
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 899px){
-    img {
-        max-width: 85%;
-    }
+@media screen and (max-width: 1024px) and (min-width: 901px){
     div a b{
         position: relative;
-        right: 51px;
+        right: -19px;
     }
     #about{
         position: relative;
-        left: 107px;
+        left: 19px;
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 899px){
-    img {
-        max-width: 85%;
-    }
+@media screen and (max-width: 900px) and (min-width: 801px){
     div a b{
         position: relative;
-        right: 51px;
+        right: 23px;
     }
     #about{
         position: relative;
-        left: 107px;
+        left: 59px;
     }
 }
 
-@media screen and (max-width: 900px) and (min-width: 767px){
-    img {
-        max-width: 85%;
-    }
+@media screen and (max-width: 800px) and (min-width: 768px){
     div a b{
         position: relative;
-        right: 90px;
+        right: -8px;
     }
     #about{
+        position: relative;
+        left: 23px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 576px){
+    div a b{
+        position: relative;
+        right: 50px;
+    }
+    #about{
+        position: relative;
+        left: 89px;
+        bottom: 34.5px;
+    }
+}
+
+@media screen and (max-width: 575px) and (min-width: 541px){
+    div a b{
         position: relative;
         left: 147px;
     }
+    #about{
+        position: relative;
+        right: 109px;
+    }
 }
 
-@media screen and (max-width: 768px) and (min-width: 599px){
-    img {
-        max-width: 85%;
-    }
+@media screen and (max-width: 540px) and (min-width: 481px){
     div a b{
         position: relative;
-        right: 90px;
+        left: 130px;
     }
     #about{
         position: relative;
-        left: 147px;
+        right: 91px;
     }
 }
 
-@media screen and (max-width: 600px) and (min-width: 481px){
-    img {
-        max-width: 85%;
-    }
+@media screen and (max-width: 480px) and (min-width: 415px){
     div a b{
         position: relative;
         left: 99px;
     }
     #about{
         position: relative;
-        left: -56px;
+        right: 62px;
     }
 }
 
-@media screen and (max-width: 480px) and (min-width: 321px){
-    img {
-        max-width: 90%;
-    }
+@media screen and (max-width: 414px) and (min-width: 394px){
     div a b{
         position: relative;
-        left: 83px;
+        left: 67px;
     }
     #about{
         position: relative;
-        right: 41px;
+        right: 29px;
     }
 }
 
-@media screen and (max-width: 320px){
-    img {
-        max-width: 100%;
-    }
+@media screen and (max-width: 393px) and (min-width: 385px){
     div a b{
         position: relative;
-        left: 44px;
+        left: 57px;
+    }
+    #about{
+        position: relative;
+        right: 19px;
+    }
+}
+
+@media screen and (max-width: 384px) and (min-width: 376px){
+    div a b{
+        position: relative;
+        left: 55px;
+    }
+    #about{
+        position: relative;
+        right: 17px;
+    }
+}
+
+@media screen and (max-width: 375px) and (min-width: 361px){
+    div a b{
+        position: relative;
+        left: 54px;
+    }
+    #about{
+        position: relative;
+        right: 17px;
+    }
+}
+
+@media screen and (max-width: 360px) and (min-width: 321px){
+    div a b{
+        position: relative;
+        left: 51px;
+    }
+    #about{
+        position: relative;
+        right: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) and (min-width: 281px){
+    div a b{
+        position: relative;
+        left: 45px;
+    }
+    #about{
+        position: relative;
+        right: 13px;
+    }
+}
+
+@media screen and (max-width: 280px) and (min-width: 241px){
+    div a b{
+        position: relative;
+        left: 39px;
     }
     #about{
         position: relative;
         right: 10px;
+    }
+}
+
+@media screen and (max-width: 240px){
+    div a b{
+        position: relative;
+        left: 32px;
+    }
+    #about{
+        position: relative;
+        right: 9px;
     }
 }

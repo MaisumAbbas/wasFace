@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Was This The Face</title>
+        <style>
+            body {
+                background-color: black;
+                text-align: center;
+            }
+            .row {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body onload="switchPage()">
+        <div class="row" style="position: absolute; top: 50%; left: 45%; font-family: Courier">
+            was this the face
+        </div>
+        <script>
+            function switchPage(){
+            setTimeout(function () {
+                window.location.href = "/home";
+                window.clearTimeout(tID);		// clear time out.
+            }, 3000);
+        }
+        </script>
+    </body>
+</html>

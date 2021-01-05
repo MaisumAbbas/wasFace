@@ -9,14 +9,22 @@
                 background-color: black;
                 text-align: center;
             }
-            .row a {
+            .row {
                 color: white;
                 text-decoration: none;
+            }
+            div a {
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover{
+                color: #A9A9A9;
             }
         </style>
     </head>
 
-    <body>
+    <body onload="switchPage()">
         <div class="row" style="position: absolute; top: 50%; left: 45%; font-family: Courier">
             <a href="{% url 'home' %}">was this the face</a>
         </div>

@@ -6,36 +6,45 @@
         <title>Home | Was This The Face</title>
         {% include 'head.html' %}
         <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+        <style>
+            @font-face {
+                font-family: Avenir;
+                src: url('../static/assets/fonts/arial.ttf');
+            }
+            div a {
+                color: #C1C1C1;
+                text-decoration: none;
+                font-family: Avenir;
+            }
+
+            a:hover{
+                color: #A9A9A9;
+            }
+        </style>
     </head>
 
-    <body onload="switchPage()" style="overflow: hidden">
-        <div class="wrapper wrapper-full-page wrapper-full-page2">
-            <div class="full-page  section-image">
-                <div class="content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-sm-12 text-center ">
-                                        <img src="{% static 'assets/img/second.png' %}" id="face" alt="">
-                                        <br>                               
-                                        <!--<p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>-->
-                                    </div>
-                                    <div class="col-sm-12 text-center">
-                                        <div class="row">
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4 text-left">
-                                                <a href="{% url 'instructions' %}" style="font-size: 12px; letter-spacing: 0;">
-                                                    <b>CLICK HERE TO ADD <br> YOUR FACE</b>
-                                                </a>
-                                                <a href="#" id="about" class="pull-right">ABOUT</a>
-                                            </div>
-                                            <div class="col-md-4"></div>
-                                        </div>
-
-                                    </div>
+    <body onload="switchPage()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-sm-12 text-center ">
+                            <img src="{% static 'assets/img/second.png' %}" id="face" alt="" style="max-width: 100%;">
+                            <br>
+                            <!--<p id="link" style="float: right;"><a href="https://www.emilyerekson.com/installations" target="_blank">Emily Erekson</a> &amp; <a href="https://www.jamieerekson.com/installations" target="_blank">Jamie Erekson</a></p>-->
+                        </div>
+                        <div class="col-sm-12 text-center">
+                            <div class="row">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4 text-left">
+                                    <a href="{% url 'instructions' %}" class="pull-left" style="font-size: 12px; letter-spacing: 0;">
+                                        <b>CLICK HERE TO ADD <br> YOUR FACE</b>
+                                    </a>
+                                    <a href="#" id="about" class="pull-right" style="font-size: 12px; letter-spacing: 0;"><br>ABOUT</a>
                                 </div>
+                                <div class="col-sm-4"></div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -56,17 +65,15 @@
 
         function switchPage(){
             var height = screen.height;
-            alert(height);
-            var totalHeight = (10/100)*height;
+            var totalHeight = (24/100)*height;
             height = height - totalHeight;
             height = height.toString();
             height = height.concat('px');
-            alert(height);
             document.getElementById('face').style.height = height;
-            /*setTimeout(function () {
-                window.location.href = "/";
+            setTimeout(function () {
+                window.location.href = "/flash";
                 window.clearTimeout(tID);		// clear time out.
-            }, 30000);*/
+            }, 30000);
         }
     </script>
 </html>

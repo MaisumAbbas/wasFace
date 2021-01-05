@@ -8,13 +8,11 @@
         <style>
             .container2 {
                 margin: 0px auto;
-                width: 700px;
-                height: 350px;
             }
         </style>
     </head>
 
-    <body data-color="blue">
+    <body data-color="blue" onload="switchPage()">
         <div class="wrapper wrapper-full-page">
             <div class="full-page  section-image">
                 <br>
@@ -26,8 +24,8 @@
                                 <div class="card ">
                                     <div class="card-body ">
                                         <div class="row">
-                                            <div class="col-md-12 text-center">
-                                                <video autoplay="true" id="videoElement"></video>
+                                            <div class="col-md-12 text-center face">
+                                                <video autoplay="true" id="videoElement" style="max-width:100%; object-fit: cover;"></video>
                                                 <br>
                                                 <a href="{% url 'index' %}"><button class="btn" style="background-color: black; font-family: Courier">capture photo</button></a>
                                             </div>
@@ -62,6 +60,15 @@
         }
         function videoError(e){
 
+        }
+    
+        function switchPage(){
+            var height = screen.height;
+            var totalHeight = (35/100)*height;
+            height = height - totalHeight;
+            height = height.toString();
+            height = height.concat('px');
+            document.getElementById('videoElement').style.height = height;
         }
     </script>
 </html>

@@ -21,6 +21,7 @@ from faceapp.views import *
 urlpatterns = [
     path('', views.index, name='index'),
     path('home/', views.home, name='home'),
+    path('flash/', views.flash, name='flash'),
     path('instructions/', views.instructions, name='instructions'),
     path('camera/', views.camera, name='camera'),
     path('login/', views.admin_login, name='login'),
