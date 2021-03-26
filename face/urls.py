@@ -27,5 +27,6 @@ urlpatterns = [
     path('login/', views.admin_login, name='login'),
     path('admin/', admin.site.urls),
     path('faceapp/', include('faceapp.urls')),
+    path('capture/picture/', views.capture_picture, name='capture_picture'),
     path('logout/', views.user_logout, name='logout'),
 ]

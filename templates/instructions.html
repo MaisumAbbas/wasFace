@@ -107,7 +107,8 @@
                             <p style="font-size: 14px; font-family: Courier;">By clicking "agree and continue", I hereby agree and consent to the <a href="#" style="font-family: Courier;">user agreement</a>, its policies, and the <a href="#" style="font-family: Courier;">privacy policy</a>.</p>
                         </div>
                         <div class="modal-footer text-center">
-                            <a href="{% url 'camera' %}"><button type="button" class="btn" style="background-color: black; font-family: Courier;">agree and continue</button></a>
+                            {% comment %} <a href="{% url 'camera' %}"><button type="button" class="btn" style="background-color: black; font-family: Courier;">agree and continue</button></a> {% endcomment %}
+                            <a href="{% url 'capture_picture' %}"><button type="button" class="btn" style="background-color: black; font-family: Courier;">agree and continue</button></a>
                         </div>
                     </div>
                 </div>

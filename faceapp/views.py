@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from subprocess import check_output, run, PIPE
+import sys 
+import os
 
 # Create your views here.
 def index(request):
@@ -62,3 +65,7 @@ def audio_track_list(request):
 @login_required
 def profile(request):
     return render(request, 'admin/profile.html')
+
+def capture_picture(request):
+    out = run([sys.executable, 'C://Users//Maisum Abbas//face//faceapp//detect.py'])
+    return redirect('/')

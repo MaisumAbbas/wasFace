@@ -6,13 +6,30 @@
         <title>Camera | Was This The Face</title>
         {% include 'head.html' %}
         <style>
-            .container2 {
+            {% comment %} .container2 {
                 margin: 0px auto;
+            } {% endcomment %}
+            {% comment %} body {
+                margin: 0;
+                height: 0;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
+            canvas{
+                position: absolute;
+            } {% endcomment %}
         </style>
+        {% comment %} <script defer src="{% static 'assets/js/plugins/face-api.min.js' %}"></script>
+        <script defer src="{% static 'assets/js/face.js' %}"></script> {% endcomment %}
     </head>
 
-    <body data-color="blue" onload="switchPage()">
+    <body>
+        {% comment %} <video id="video" width="720" height="500" autoplay muted></video> {% endcomment %}
+    </body>
+    {% comment %} <body data-color="blue" onload="switchPage()">
         <div class="wrapper wrapper-full-page">
             <div class="full-page  section-image">
                 <br>
@@ -49,6 +66,7 @@
                 $('.card').removeClass('card-hidden');
             }, 700)
         });
+        
         var video = document.querySelector("#videoElement");
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUsermedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
         if (navigator.getUserMedia) {
@@ -70,5 +88,5 @@
             height = height.concat('px');
             document.getElementById('videoElement').style.height = height;
         }
-    </script>
+    </script> {% endcomment %}
 </html>
